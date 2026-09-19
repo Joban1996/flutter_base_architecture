@@ -19,7 +19,7 @@ class  SecureStorageUtils{
   }
 
   ///Method for write new data
-  writeSecureData(String key, String value) async {
+   Future<void> writeSecureData(String key, String value) async {
     await _secureStorage.write(key: key, value: value);
   }
   ///Method for read existing data
@@ -28,7 +28,7 @@ class  SecureStorageUtils{
     return value;
   }
   ///Method for delete data
-  deleteSecureData(String key) async {
+  Future<void> deleteSecureData(String key) async {
     await _secureStorage.delete(key: key);
   }
 
